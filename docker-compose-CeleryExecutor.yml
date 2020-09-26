@@ -15,6 +15,7 @@ services:
             - EXECUTOR=Celery
         volumes:
             - ./dags:/usr/local/airflow/dags
+            - ./webserver_config.py:/usr/local/airflow/webserver_config.py
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
         ports:
