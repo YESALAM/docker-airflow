@@ -18,7 +18,7 @@ services:
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
         ports:
-            - "8080:8080"
+            - "8765:8080"
         command: webserver
         healthcheck:
             test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
@@ -35,7 +35,7 @@ services:
             - EXECUTOR=Celery
             # - REDIS_PASSWORD=redispass
         ports:
-            - "5555:5555"
+            - "8766:5555"
         command: flower
 
     scheduler:
