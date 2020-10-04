@@ -16,6 +16,7 @@ services:
         volumes:
             - ./dags:/usr/local/airflow/dags
             - ./webserver_config.py:/usr/local/airflow/webserver_config.py
+            - ./requirements.txt:/requirements.txt
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
         ports:
